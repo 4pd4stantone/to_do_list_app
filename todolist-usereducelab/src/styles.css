@@ -1,0 +1,27 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.list {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 10px 0px;
+}
+
+.add-section {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.add-input {
+  width: 250px;
+}
+
+.add-input::placeholder {
+  padding-left: 5px;
+  color: gray;
+}
+
