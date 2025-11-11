@@ -1,15 +1,30 @@
 .App {
   font-family: sans-serif;
   text-align: center;
+  display: block;
+  
+  width: 100%
 }
-
+#todolist-section {
+  max-width: 100%;
+  display: block;
+  justify-items: center;
+}
+.todolist {
+  display: block;
+  width: 500px;
+  justify-items: center;
+  margin: 10px 50px 0 0;
+}
 .list {
   display: flex;
   justify-content: center;
   gap: 10px;
-  margin: 10px 0px;
+  margin: 20px;
 }
-
+.task-area {
+  min-width: 200px;
+}
 .add-section {
   display: flex;
   justify-content: center;
@@ -18,10 +33,14 @@
 
 .add-input {
   width: 250px;
+
 }
 
 .add-input::placeholder {
   padding-left: 5px;
   color: gray;
 }
+
+
+
 

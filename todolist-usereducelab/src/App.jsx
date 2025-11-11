@@ -1,5 +1,4 @@
 import "./styles.css";
-import ToDoList from "./ToDoList.jsx";
 import Form from "./Form.jsx";
 
 export default function App() {
@@ -7,10 +6,6 @@ export default function App() {
     <div className="App">
       <h1>To-do List App</h1>
       <Form />
-      <ToDoList />
-      <ToDoList />
-      <ToDoList />
-      <ToDoList />
     </div>
   );
 }
