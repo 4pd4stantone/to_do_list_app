@@ -1,5 +1,5 @@
 import { useState } from 'react'
-
+import List from './List'
 
 export default function Form() {
 
@@ -10,15 +10,6 @@ export default function Form() {
         setToDoList(prev => [...prev, newToDoItem]);
         console.log(newToDoItem)
     }
-
-    const listOfToDoItems = toDoList.map(task => (
-        <div key={task} className="list">
-            <input type="checkbox" name="done" value="done" />
-            <div className='task-area'>{task}</div>
-            <button>Edit</button>
-            <button disabled={true}>Delete</button>
-        </div>
-    ))
 
   return (
     <>
@@ -33,10 +24,9 @@ export default function Form() {
                     />
                     <button className="add-btn">+ Add Task</button>
             </form>
+            <List toDoList={toDoList} setToDoList={setToDoList} />
         </main>
-        <section id='todolist-section' >
-                <ul className="todolist" >{listOfToDoItems}</ul>
-        </section>
+        
     </>
   );
 } 
