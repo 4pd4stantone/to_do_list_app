@@ -25,7 +25,7 @@ export default function List({toDoList, setToDoList}) {
         <section id='todolist-section' >
             <ul className="todolist" >
                 {toDoList.map(task => (
-                        <div key={task.toDoItem} className="list">
+                        <div key={task.id} className="list">
                             {!task.isEditing ? 
                             <>
                                 <input type="checkbox" name="checkbox" onChange={() => handleCheckBox(task.toDoItem)} />

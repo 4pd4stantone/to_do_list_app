@@ -9,13 +9,15 @@ export default function Form() {
         const toDoItem = formData.get("newTask");
         if (!toDoItem) return;
         const newTask = {
+            id: Date.now(),
             toDoItem,
             completed: false,
             isEditing: false
         }
         setToDoList(prev => [newTask, ...prev]);
-       
     }
+
+    console.log(toDoList)
 
   return (
     <>
