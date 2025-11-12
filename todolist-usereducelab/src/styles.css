@@ -1,9 +1,23 @@
 .App {
   font-family: sans-serif;
   text-align: center;
-  display: block;
-  
   width: 100%
+}
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 30px;
+  padding: 20px 0 20px 0;
+  
+}
+#title {
+  font-size: 50px;
+  color: #2b4a60;
+}
+#logo {
+  width: 100px;
 }
 #todolist-section {
   max-width: 100%;
@@ -33,14 +47,28 @@
 
 .add-input {
   width: 250px;
-
+  border: #2b4a60 1px solid;
+  border-radius: 5px;
+  padding-left: 10px;
 }
 
 .add-input::placeholder {
-  padding-left: 5px;
+
   color: gray;
 }
+.add-input:focus {
+  border: none;
+  outline: 2px solid #29acfe;
+  border-radius: 5px;
+  padding-left: 10px;
+  color: #2b4a60;
+}
 
-
+button {
+  background-color: white;
+  border: #29acfe 3px solid;
+  border-radius: 8px;
+  color: #2b4a60;
+}
 
 
