@@ -35,6 +35,8 @@ header {
   justify-content: center;
   gap: 10px;
   margin: 20px;
+  align-items: center;
+  color:#2b4a60 ;
 }
 .task-area {
   min-width: 200px;
