@@ -20,6 +20,9 @@ export default function List({toDoList, setToDoList}) {
             const newToDoItem = e.target.value;
             setToDoList(prev => prev.map(task => task.toDoItem === toDoItem ? {...task, toDoItem: newToDoItem} : task))
         }
+        function handleDelete(id) {
+            setToDoList(prev => prev.filter(task => task.id !== id))
+        }
 
     return (
         <section id='todolist-section' >
@@ -31,7 +34,7 @@ export default function List({toDoList, setToDoList}) {
                                 <input type="checkbox" name="checkbox" onChange={() => handleCheckBox(task.toDoItem)} />
                                 <div className='task-area'>{task.toDoItem}</div>
                                 <button onClick={() => handleEdit(task.toDoItem)}>Edit</button>
-                                <button disabled={!task.completed}>Delete</button>
+                                <button disabled={!task.completed} onClick={() => handleDelete(task.id)}>Delete</button>
                             </> :
                             <>
                                 <input type="checkbox" name="checkbox" disabled/>
