@@ -6,9 +6,15 @@ export default function Form() {
     const [toDoList, setToDoList] = useState([])
 
     function handleAdd(formData) {
-        const newToDoItem = formData.get("newTask");
-        setToDoList(prev => [...prev, newToDoItem]);
-        console.log(newToDoItem)
+        const toDoItem = formData.get("newTask");
+        if (!toDoItem) return;
+        const newTask = {
+            toDoItem,
+            completed: false,
+            isEditing: false
+        }
+        setToDoList(prev => [newTask, ...prev]);
+       
     }
 
   return (
